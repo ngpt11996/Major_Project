@@ -65,7 +65,7 @@
                 <p>Amazing pools</p>
             </a>
         </div>
-        <div class="tax-toggle">
+        <div class="tax-toggle ms-10">
             <div class="form-check-reverse form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
@@ -74,7 +74,7 @@
     </div>
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
         <% for(let listing of allListings) { %>
-        <a href="/listings/<%= listing._id%>" style="text-decoration: none;" class="listing-link">
+        <a href="/listings/<%= listing._id%>" style="color: black;text-decoration: none;" class="listing-link">
             <div class="card listing-card">
                 <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_img" style="height: 20rem;">
                 <div class="card-img-overlay"></div>

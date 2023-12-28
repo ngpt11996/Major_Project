@@ -7,8 +7,8 @@
                 <form method="POST" enctype="multipart/form-data" action="/listings/<%= listing._id %>?_method=PUT" class="needs-validation" novalidate>
                     <div class="mt-3">
                         <label for="title" class="form-label">Title</label>
-                        <input type="text" id="title" class="form-control" name="listing[title]" required value=<%=listing.title
-                            %>>
+                        <input type="text" id="title" class="form-control" name="listing[title]" required value="<%=listing.title
+                            %>">
                             <div class="invalid-feedback">
                                 Please enter a catchy title.
                               </div>
@@ -36,6 +36,19 @@
                                 Please enter a valid image url.
                               </div>
                     </div>
+                    <div class="mt-3" style="display: flex;line-height: 2;">
+                        <label for="category" style="margin-right: 1rem;">Category</label>
+                        <select required style="border: 1px solid #ced4da;flex: 1;border-radius: 0.375rem;" name="listing[category]" id="category">
+                            <option value="trending">Trending</option>
+                            <option value="rooms">Rooms</option>
+                            <option value="iconicCities">Iconic Cities</option>
+                            <option value="castles">Castles</option>
+                            <option value="farms">Farms</option>
+                            <option value="camping">Camping</option>
+                            <option value="arctic">Arctic</option>
+                            <option value="amazingPools">Amazing Pools</option>
+                        </select>
+                    </div>
                     <div class="row">
                         <div class="mt-3 col-md-4">
                             <label for="price" class="form-label">Price</label>
@@ -47,8 +60,8 @@
                         </div>
                         <div class="mt-3 col-md-8">
                             <label for="country" class="form-label">Country</label>
-                            <input type="text" name="listing[country]" id="country" required class="form-control"
-                                value=<%= listing.country %>>
+                            <input type="text" readonly name="listing[country]" id="country" class="form-control"
+                                value="<%= listing.country %>">
                                 <div class="invalid-feedback">
                                     Please enter a valid country.
                                   </div>
@@ -56,8 +69,8 @@
                     </div>
                     <div class="mt-3">
                         <label for="location" class="form-label">Location</label>
-                        <input type="text" name="listing[location]" id="location" required class="form-control"
-                            value=<%= listing.location %>>
+                        <input type="text" readonly name="listing[location]" id="location" class="form-control"
+                            value="<%= listing.location %>">
                             <div class="invalid-feedback">
                                 Please enter a valid location.
                               </div>
