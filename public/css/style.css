@@ -118,8 +118,8 @@ body{
 
 #filters{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
 }
 
 .filter{
@@ -148,7 +148,6 @@ body{
     border-radius: 1rem;
     padding: 1rem;
     height: 3rem;
-    margin-left: 15rem;
     display: flex;
     align-items: center;
     font-size: 0.9rem;
